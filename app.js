@@ -49,9 +49,9 @@ const store = MongoStore.create({
     },
     touchAfter: 24 * 60 * 60, 
 });
-store.on("error",(err)=>{
-    console.log("Mongo Session Store Error",err);
-});
+// store.on("error",(err)=>{
+//     console.log("Mongo Session Store Error",err);
+// });
 
 const sesssionOptions={
     store,
@@ -85,14 +85,14 @@ app.use((req,res,next)=>{
     next();
 });
 
-app.get("/demoUser",async(req,res)=>{
-    let fakeUser=new User({
-        email:"xyz@gmail.com",
-        username:"xyzt-student",
-    });
-    let registerdUser=await User.register(fakeUser,"chicken");
-    res.send(registerdUser);
-});
+// app.get("/demoUser",async(req,res)=>{
+//     let fakeUser=new User({
+//         email:"xyz@gmail.com",
+//         username:"xyzt-student",
+//     });
+//     let registerdUser=await User.register(fakeUser,"chicken");
+//     res.send(registerdUser);
+// });
 app.use("/listings",listingRouter);
 
 app.use ("/listings/:id/reviews", reviewRouter);
