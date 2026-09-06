@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> WanderLust</title>
+    <title> StayHub</title>
     <!-- <link rel="icon" href="./assets/logo.png"> -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- bootstrap -->
@@ -13,32 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;400;500;600;&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/rating.css">
-
-    <!-- maplibre-->
-     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.css' />
-    
-    <script type="module">
-    import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.mjs';
-
-    const map = new maplibregl.Map({
-        container: 'map', // container id
-        style: 'https://tiles.openfreemap.org/styles/bright', //stylesheet location
-        center: [77.2090, 28.6139], // starting position
-        zoom: 10 // starting zoom
-    });
-
-    map.addControl(new maplibregl.FullscreenControl());
-    const marker = new maplibregl.Marker({color: 'red'})
-    .setLngLat([77.2090, 28.6139])
-    .setPopup(new maplibregl.Popup()
-        .setHTML("<p>Exact location provided after booking</p>"))
-    .addTo(map);
-
-   </script>
-
-   <!-- map box -->
-    <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v3.29.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.29.0/mapbox-gl.js"></script> -->
 
 
 </head>
