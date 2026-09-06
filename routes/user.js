@@ -2,7 +2,7 @@ const express= require("express");
 const router =express.Router();
 
 const wrapAsync=require("../utils/wrapAsync.js");
-const ExpressError=require("../utils/expressError.js");
+const ExpressError=require("../utils/ExpressError.js");
 const passport = require("passport");
 
 const User=require("../models/user.js");
